@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_concept_concepts",
+  "info": {
+    "displayName": "concept",
+    "icon": "bulletList"
+  },
+  "options": {},
+  "attributes": {
+    "typearticle": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    }
+  }
+}

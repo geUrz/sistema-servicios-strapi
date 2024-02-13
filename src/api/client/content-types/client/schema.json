@@ -1,0 +1,50 @@
+{
+  "kind": "collectionType",
+  "collectionName": "clients",
+  "info": {
+    "singularName": "client",
+    "pluralName": "clients",
+    "displayName": "Client",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "contact": {
+      "type": "string",
+      "required": true
+    },
+    "cellnumber": {
+      "required": true,
+      "type": "biginteger"
+    },
+    "address": {
+      "type": "string",
+      "required": true
+    },
+    "client": {
+      "type": "string",
+      "required": true
+    },
+    "service": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::service.service",
+      "inversedBy": "clients"
+    },
+    "budget": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::budget.budget",
+      "inversedBy": "clients"
+    },
+    "report": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::report.report",
+      "inversedBy": "clients"
+    }
+  }
+}

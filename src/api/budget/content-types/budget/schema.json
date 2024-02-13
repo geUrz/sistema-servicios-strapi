@@ -1,0 +1,58 @@
+{
+  "kind": "collectionType",
+  "collectionName": "budgets",
+  "info": {
+    "singularName": "budget",
+    "pluralName": "budgets",
+    "displayName": "Budget",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "quantity": {
+      "required": false,
+      "type": "integer"
+    },
+    "price": {
+      "required": false,
+      "type": "integer"
+    },
+    "contact": {
+      "type": "string",
+      "required": false
+    },
+    "description": {
+      "type": "text",
+      "required": false
+    },
+    "invoicenumber": {
+      "type": "biginteger"
+    },
+    "typearticle": {
+      "type": "string"
+    },
+    "typedocument": {
+      "type": "string",
+      "required": false
+    },
+    "status": {
+      "type": "string",
+      "required": false
+    },
+    "clients": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::client.client",
+      "mappedBy": "budget"
+    },
+    "concept": {
+      "displayName": "concept",
+      "type": "component",
+      "repeatable": false,
+      "component": "concept.concept"
+    }
+  }
+}
