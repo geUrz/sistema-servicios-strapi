@@ -23,6 +23,11 @@
     },
     "price": {
       "type": "biginteger"
+    },
+    "budget": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::budget.budget"
     }
   }
 }

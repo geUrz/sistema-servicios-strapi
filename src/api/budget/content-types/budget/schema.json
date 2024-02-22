@@ -47,12 +47,6 @@
       "relation": "oneToMany",
       "target": "api::client.client",
       "mappedBy": "budget"
-    },
-    "concept": {
-      "displayName": "concept",
-      "type": "component",
-      "repeatable": false,
-      "component": "concept.concept"
     }
   }
 }
